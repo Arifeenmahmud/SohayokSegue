@@ -64,11 +64,17 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         cell.mainText.text = Imgname[indexPath.item]
         cell.mainImageView.image = mainImg[indexPath.item]
         return cell
+        
+        
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let text = mainImg[indexPath.row]
-//        print("Selected \(text)")
+        let text = mainImg[indexPath.row]
+        print("Selected \(text)")
         
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        controller.selectedIndex = indexPath.row //pass selected cell index to next view.
+        self.navigationController?.pushViewController(controller, animated: true)
     }
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        

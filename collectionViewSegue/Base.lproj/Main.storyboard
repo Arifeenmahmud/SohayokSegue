@@ -95,10 +95,25 @@
             </objects>
             <point key="canvasLocation" x="1072.8" y="133.5832083958021"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="mr8-dN-FDk">
+            <objects>
+                <viewController id="cEZ-zC-O8P" customClass="DetailViewController" customModule="collectionViewSegue" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3iF-ZG-Hfx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="gy3-yt-drf"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K3d-e0-fIO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1073" y="821"/>
+        </scene>
         <!--Detail View-->
         <scene sceneID="hxK-Re-faP">
             <objects>
-                <viewController id="zz5-gP-poI" userLabel="Detail View" customClass="DetailViewController" customModule="collectionViewSegue" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="zz5-gP-poI" userLabel="Detail View" customClass="DetailViewController" customModule="collectionViewSegue" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e8h-6c-e3m">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -129,19 +144,30 @@
                                             <rect key="frame" x="0.0" y="0.0" width="161" height="165"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="98Q-EK-OLm">
-                                                    <rect key="frame" x="0.0" y="-2" width="161" height="128"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="98Q-EK-OLm">
+                                                    <rect key="frame" x="0.0" y="6" width="161" height="120"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rIs-Bb-pdz">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rIs-Bb-pdz">
                                                     <rect key="frame" x="0.0" y="134" width="161" height="31"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="31" id="dnE-L4-z0I"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="rIs-Bb-pdz" firstAttribute="trailing" secondItem="98Q-EK-OLm" secondAttribute="trailing" id="1li-fG-Y24"/>
+                                            <constraint firstItem="rIs-Bb-pdz" firstAttribute="top" secondItem="98Q-EK-OLm" secondAttribute="bottom" constant="8" symbolic="YES" id="A0E-r4-Cfq"/>
+                                            <constraint firstItem="rIs-Bb-pdz" firstAttribute="top" secondItem="98Q-EK-OLm" secondAttribute="bottom" constant="8" id="BcQ-sq-n8j"/>
+                                            <constraint firstItem="rIs-Bb-pdz" firstAttribute="leading" secondItem="loe-ac-Wen" secondAttribute="leading" id="HdC-fV-m2k"/>
+                                            <constraint firstItem="98Q-EK-OLm" firstAttribute="top" secondItem="loe-ac-Wen" secondAttribute="topMargin" constant="-22" id="Kza-Rj-Uyz"/>
+                                            <constraint firstAttribute="trailing" secondItem="rIs-Bb-pdz" secondAttribute="trailing" id="bDQ-95-qnP"/>
+                                            <constraint firstAttribute="bottom" secondItem="rIs-Bb-pdz" secondAttribute="bottom" id="gte-BZ-2Dj"/>
+                                            <constraint firstItem="rIs-Bb-pdz" firstAttribute="leading" secondItem="98Q-EK-OLm" secondAttribute="leading" id="yDs-nB-DLt"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="mainImageView" destination="98Q-EK-OLm" id="WKC-N5-VHS"/>
                                             <outlet property="mainText" destination="rIs-Bb-pdz" id="qFs-MV-sPY"/>

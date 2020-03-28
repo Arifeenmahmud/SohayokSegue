@@ -10,13 +10,18 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    var selection: String!
+   // var selection: String!
+    
     @IBOutlet private weak var detailsLable: UILabel!
+    
+    var selectedIndex = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        detailsLable.text = selection
+       // detailsLable.text = selection
         
+        detailsLable.text = "Selected Index is\(selectedIndex)"
         
         
     }
@@ -78,14 +83,14 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
         //        print("Selected \(text)")
         
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "DetailSegue"{
-            if let dest = segue.destination as? DetailViewController,
-                let index = myCollectionView.indexPathsForSelectedItems?.first {
-                dest.selection = Imgname[index.row]
-            }
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//
+//        if segue.identifier == "DetailSegue"{
+//            if let dest = segue.destination as? DetailViewController,
+//                let index = myCollectionView.indexPathsForSelectedItems?.first {
+//                dest.selection = Imgname[index.row]
+//            }
+//        }
+//    }
     
 }
