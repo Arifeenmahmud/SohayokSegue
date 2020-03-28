@@ -35,14 +35,14 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var myCollectionView: UICollectionView!
     
-    let Imgname = ["ec","em","fn","id"]
+    let Imgname = ["Transport","Hotels","Ecommerce","Online Food"]
     
     let mainImg:[UIImage] = [
         
+        UIImage(named: "ts")!,
+        UIImage(named: "ho")!,
         UIImage(named: "ec")!,
-        UIImage(named: "em")!,
-        UIImage(named: "fn")!,
-        UIImage(named: "id")!
+        UIImage(named: "on")!
         
     ]
     

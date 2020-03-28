@@ -31,14 +31,14 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var myCollectionView: UICollectionView!
     
-    let Imgname = ["ec","em","fn","id"]
+    let Imgname = ["National Info","Foreigners","ID Cards","Emergency"]
     
     let mainImg:[UIImage] = [
         
-        UIImage(named: "ec")!,
-        UIImage(named: "em")!,
+        UIImage(named: "ni")!,
         UIImage(named: "fn")!,
-        UIImage(named: "id")!
+        UIImage(named: "id")!,
+        UIImage(named: "em")!
         
     ]
     
